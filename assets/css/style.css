@@ -70,7 +70,7 @@ nav {
 }
 
 /* Show navbar when checkbox is checked */
-#nav-toggle:checked~nav {
+#nav-toggle:checked ~ nav {
     display: block;
 }
 
@@ -93,4 +93,28 @@ main {
 /* Footer */
 footer {
     background-color: orange;
+}
+
+/* Media Queries for Tablets and larger (768 and up)*/
+@media screen and (min-width: 768px) {
+    /* Header */
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+
+    #menu {
+        display: flex;
+    }
+
+    #menu > li {
+        padding-left: 1rem;
+    }
+
+    .nav-toggle-label {
+        display: none;
+    }
 }

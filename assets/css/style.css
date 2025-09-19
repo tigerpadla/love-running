@@ -162,7 +162,7 @@ hr {
     justify-content: center;
 }
 
-#times{
+#times {
     background: url("../images/dublin-city.webp") no-repeat center/cover;
     display: flex;
     flex-wrap: wrap;
@@ -170,7 +170,7 @@ hr {
 
 #times div {
     color: #fafafa;
-    background-color: rgba(0, 0, 0, .6);
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 15px;
     text-align: center;
     /*This will not wrap on screens smaller than 400px. Each div will expand to fill available space on its row*/
@@ -208,6 +208,14 @@ hr {
     font-size: 160%;
     padding: 5%;
     color: #3a3a3a;
+}
+
+/* Media Queries for large or landscape phones (576 and up)*/
+@media screen and (min-width: 576px) {
+    #photos {
+        column-count: 2;
+        column-gap: 0;
+    }
 }
 
 /* Media Queries for Tablets and larger (768 and up)*/
@@ -264,9 +272,14 @@ hr {
         width: 75%;
     }
 
-    #benefits-mental > div{
+    #benefits-mental > div {
         text-align: end;
         align-self: flex-end;
+    }
+
+    /* Gallery Page */
+    #photos {
+        column-count: 3;
     }
 }
 
@@ -275,10 +288,14 @@ hr {
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
     }
+    /* Gallery Page */
+    #photos {
+        column-count: 4;
+    }
 }
 
 /* Media Queries for Large Desktops (1200 and up)*/
-@media screen and (min-width: 1200px) {    
+@media screen and (min-width: 1200px) {
     /* Reasons section */
     #benefits {
         display: flex;
@@ -290,7 +307,7 @@ hr {
     }
 
     #benefits-image {
-        order: 0
+        order: 0;
     }
 
     #benefits-mental {
